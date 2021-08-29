@@ -1,1 +1,128 @@
-<router-outlet></router-outlet>
+<div [className]="darkMode ? 'dark-mode container-fluid t3':'light-mode container-fluid t3'">
+    <div class="d-flex justify-content-center vh-100 pt-5 px-3">
+        <div class="col-12 col-lg-6 col-xxl-5">
+            <div class="d-flex justify-content-between">
+                <div class="col">
+                    <h3 class="section-title t-3">devfinder</h3>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button (click)="toggleMode()" class="btn btn-primary btn-toggle d-flex flex-row">
+                        <div class="mode-title">{{ mode }}</div>
+                        <img *ngIf="!darkMode" class="mode-icon" src="../assets/icons/moon.png">
+                        <img *ngIf="darkMode" class="mode-icon" src="../assets/icons/sun.png">
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="card border-0 t-3 p-2">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <img class="search-icon" src="../assets/icons/search.png">
+                        </div>
+                        <div class="col">
+                            <input class="form-control search-input border-0" type="text" placeholder="Search GitHub username...">
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="card border-0 t-3 p-5">
+                    <div class="section-user d-flex flex-row">
+                        <div class="col-2">
+                            <div class="image-container">
+                                <img class="image" src="../assets/images/profile_pic.jpg">
+                            </div>
+                        </div>
+                        <div class="section-info col-10">
+                            <div class="d-flex flex-row">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div class="col">
+                                        <h3 class="name">The Octocat</h3>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="join-date text-end">Joined 25 Jan 2011</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="user-link" href="#">@octocat</a>
+                            </div>
+                            <div>
+                                <p class="bio">This profile has no bio</p>
+                            </div>
+                            <div class="card-info">
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="col">
+                                            <h6 class="title">Repos</h6>
+                                            <h4 class="number">8</h4>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="title">Followers</h6>
+                                            <h4 class="number">3938</h4>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="title">Following</h6>
+                                            <h4 class="number">9</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row mt-4">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div class="col">
+                                        <div class="d-flex flex-row">
+                                            <div>
+                                                <img *ngIf="darkMode" class="icon-info" src="../assets/icons/dark/pin.png">
+                                                <img *ngIf="!darkMode" class="icon-info" src="../assets/icons/light/pin.png">
+                                            </div>
+                                            <h6 class="title">San Francisco</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex flex-row">
+                                            <div>
+                                                <img *ngIf="darkMode" class="icon-info" src="../assets/icons/dark/twitter.png">
+                                                <img *ngIf="!darkMode" class="icon-info" src="../assets/icons/light/twitter.png">
+                                            </div>
+                                            <h6 class="title">Not Available</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row mt-2">
+                                <div class="d-flex justify-content-between w-100">
+                                    <div class="col">
+                                        <div class="d-flex flex-row">
+                                            <div>
+                                                <img *ngIf="darkMode" class="icon-info" src="../assets/icons/dark/link.png">
+                                                <img *ngIf="!darkMode" class="icon-info" src="../assets/icons/light/link.png">
+                                            </div>
+                                            <a class="title" href="#">http://github.blog</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex flex-row">
+                                            <div>
+                                                <img *ngIf="darkMode" class="icon-info" src="../assets/icons/dark/company.png">
+                                                <img *ngIf="!darkMode" class="icon-info" src="../assets/icons/light/company.png">
+                                            </div>
+                                            <h6 class="title">agithub</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

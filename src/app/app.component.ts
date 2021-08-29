@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'github-user-search';
+	darkMode = false;
+	mode = 'DARK';
+
+	toggleMode() {
+		this.darkMode = !this.darkMode;
+
+		if(this.darkMode) {
+			this.mode = 'LIGHT';
+		}
+		else {
+			this.mode = 'DARK';
+		}
+	}
 }
